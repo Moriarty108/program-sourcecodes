@@ -11,6 +11,7 @@ int main(){
     cout<<"\n Enter Exponent :";
     cin>>expt;
     cout<<"\n Result : "<<power(base , expt);
+    return 0;
 }
 
 double power(float base , int exponent){
