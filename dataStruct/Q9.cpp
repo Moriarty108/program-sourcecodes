@@ -51,6 +51,8 @@ float performOperation(int operand1 , int operand2 , char operation){
             break;    
         case '^':
             return pow(operand1 , operand2);
+        case '$':
+            return pow(operand1 , operand2);
         default: //Enter default case here
             break;
     }
@@ -59,7 +61,7 @@ float performOperation(int operand1 , int operand2 , char operation){
 float evaluate(string expression){
     Stack<float> numberStack;
     //operator Library for storing operators
-    char opLib[] = {'+' , '-' , '*' , '/' , '^'};
+    char opLib[] = {'+' , '-' , '*' , '/' , '^', '$'};
        for(int i = 0; i < expression.length(); i++){
         if(isNumber(expression[i]))
         numberStack.push(expression[i] - 48);
