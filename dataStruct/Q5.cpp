@@ -29,10 +29,7 @@ int main(){
         cout<<"\n [Error] Nothing to pop";
         }
         else if(ch == 3){
-            while(!(num_stack.isEmpty()))
-            {
-                num_stack.pop();
-            }
+            num_stack.clear();
             cout<<"\n => Stack Cleared";
         }
        
