@@ -11,6 +11,8 @@ template <class T> class Stack{
     void push(T element);
     T pop();
     bool isEmpty();
+    int getTOS();
+    void clear();
 };
 
 template <typename T>
@@ -33,4 +35,16 @@ bool Stack<T>::isEmpty(){
     if(tos == -1)
     return true;
     else return false;
+}
+
+template <typename T>
+int Stack<T>::getTOS(){
+    return tos;
+}
+
+template <typename T>
+void Stack<T>::clear(){
+    while(!isEmpty()){
+        pop();
+    }
 }
