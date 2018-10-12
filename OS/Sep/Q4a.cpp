@@ -13,11 +13,11 @@ int main(){
     }
     else if(pid == 0){
         /* child process */
-        printf("Child Process\n");
+        printf("Process execution Complete\n");
     }
     else{
         /* Parent process */
-        printf("Parent Process\n");
+        printf("Process execution Complete\n");
     }
     return 0;
 }
