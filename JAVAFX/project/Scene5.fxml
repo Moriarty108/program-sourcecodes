@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ControllerBMI">
+  <children>
+    <MenuBar fx:id="menuBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Options">
+          <items>
+            <MenuItem fx:id="goBack" mnemonicParsing="false" text="Go Back" />
+            <MenuItem fx:id="exit" mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="219.0" layoutY="42.0" text="BMI Calculator" textFill="#1212d0">
+               <font>
+                  <Font name="HelveticaNeue Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="117.0" text="Height :" />
+            <Label layoutX="169.0" layoutY="171.0" text="Weight :" />
+            <Label layoutX="170.0" layoutY="229.0" text="BMI :" />
+            <Separator layoutY="352.0" prefWidth="600.0" />
+            <Label fx:id="status" layoutX="29.0" layoutY="353.0" text="Ready" />
+            <TextField fx:id="height" layoutX="230.0" layoutY="113.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField fx:id="weight" layoutX="230.0" layoutY="167.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField fx:id="result" editable="false" layoutX="230.0" layoutY="225.0" prefHeight="25.0" prefWidth="160.0" />
+            <Button layoutX="274.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Calculate" />
+            <Label layoutX="190.0" layoutY="138.0" text="m" textFill="#11b53a">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="192.0" layoutY="192.0" text="kg" textFill="#12c627">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

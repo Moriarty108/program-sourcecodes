@@ -1,0 +1,14 @@
+.menu-bar{
+    -fx-background-color: #d36a15;
+}
+.viper-menu{
+    -fx-text-fill: #eee6e6;
+}
+.viper-back{
+    -fx-background-color: #1e8f49;
+}
+.button{
+    -fx-background-color: #0a0a0a;
+    -fx-text-fill: #eee6e6;
+    -fx-font-weight:bold;
+}
