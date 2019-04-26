@@ -1,0 +1,26 @@
+/* any item being a paragraph with the name attribute
+will follow the css rules written below*/
+p[name]{
+    color: blue;
+}
+/* and adding larry defines the css giudelines for the
+specified attribute*/
+p[name="larry"]{
+    color: blue;
+}
+/*the name attribute starting with the word "bacon" 
+will follow this*/
+p[name^="bacon"]{
+    color:crimson;
+}
+/*the name attribute ending with the word "bacon" 
+will follow this*/
+p[name$="bacon"]{
+    color:green;
+}
+/*the name attribute just having the word "bacon" 
+will follow this*/
+p[name*="bacon"]{
+    color:aquamarine;
+}
+

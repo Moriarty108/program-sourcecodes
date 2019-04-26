@@ -1,0 +1,12 @@
+/*paragraph immediately following 
+the class "bucky" with parent as a 
+paragraph will be affected*/
+p.bucky + p{
+    color:blueviolet;
+}
+/*paragraph immediately or not immediately following 
+the class "bucky" with parent as a  paragraph
+ will be affected*/
+p.bucky ~ p{
+    color:green;
+}

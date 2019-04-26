@@ -1,0 +1,55 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+header,section,footer,aside,nav,article,hgroup{
+    display: block;
+}
+body{
+    width: 100%;
+    display: -webkit-box;/*specifies we're gonna be using flexible boxes(-webkit- means chrome comaptible)*/
+    -webkit-box-pack: center;/*way of centering the website(packing the whole "body" tag in flexible box)*/
+}
+#big_wrapper{
+    max-width: 1000px;
+    margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;/*it's gonna display each child of this tag in a vertical manner*/
+    -webkit-box-flex: 1;/*gonna make the website flexible*/
+}
+#top_header{
+    background: greenyellow;
+    border: 3px solid black;
+    padding: 20px;
+}
+#top_menu{
+    background: black;
+    color:white;
+}
+#top_menu li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px;
+    font: normal 14px Lucida Grande;
+}
+#new_div{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+#main_section{
+    border: 1px solid blue;
+    -webkit-box-flex: 1;
+    margin: 20px;
+    padding: 20px;
+}
+#side_news{
+    border: 1px solid red;
+    width: 220px;
+    margin: 20px 0px;
+    background: #66CCCC;
+}
+#footer{
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid green;
+}

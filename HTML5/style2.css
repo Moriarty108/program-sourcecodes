@@ -1,0 +1,12 @@
+/*3rd child of paragraph */
+p:nth-child(3){
+    color:green;
+}
+/*odd child of paragraph */
+p:nth-child(odd){
+    color:green;
+}
+/*even child of paragraph */
+p:nth-child(even){
+    color:crimson;
+}

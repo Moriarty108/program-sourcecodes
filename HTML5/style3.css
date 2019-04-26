@@ -1,0 +1,8 @@
+/*asterick for everything*/
+*{
+    color:crimson;
+}
+/*everything not in class "bucky" complies to this*/
+:not(.bucky){
+    color:blue;
+}

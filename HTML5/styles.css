@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+/*display:block makes all the specified tags block level elements*/
+header,section,footer,aside,nav,article,hgroup{
+    display: block;
+}
+body{
+    text-align: center;
+}
+#big_wrapper{
+    border: 1px solid black;
+    width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+}
+#top_header{
+    background-color: orangered;
+    border: 1px solid blue;
+    padding: 20px;
+}
+#top_menu{
+    background: black;
+    color:white;
+}
+/*all the elements will display in one line by display:inline-block*/
+#top_menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px Lucida Grande;
+}
+#main_section{
+    float: left;
+    width: 660px;
+    margin: 30px;/* 720px ,280px left*/
+}
+#side_news{
+    float: left;
+    width: 220px;
+    margin: 20px 0px;
+    padding: 30px;
+    background: #66CCCC;
+}
+#footer{
+    clear: both;/*adding this makes this tag ignore the floating properties on other tags*/
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid green;
+}
+article {
+    background: #FFFBCC;
+    border: 1px solid red;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+article > footer > p{
+    text-align: right;
+}
