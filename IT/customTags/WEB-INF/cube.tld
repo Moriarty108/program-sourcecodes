@@ -1,0 +1,16 @@
+<taglib>
+    <jsp-version>1.1</jsp-version>
+    <tlb-version>1.2</tlb-version>
+    <tlib-version>1.3</tlib-version>
+    <shortname>cbe</shortname>
+    <tag>
+        <name>cube</name>
+        <tag-class>custom.Cube</tag-class>
+        <bodycontent>empty</bodycontent>
+        <attribute>
+            <name>num</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+        </attribute>
+    </tag>
+</taglib>

@@ -1,0 +1,15 @@
+<taglib>
+    <jsp-version>2.1</jsp-version>
+    <tld-version>2.2</tld-version>
+    <tlib-version>2.3</tlib-version>
+
+    <tag>
+        <name>printMsg</name>
+        <tag-class>custom.PrintMessage</tag-class>
+        <bodycontent>empty</bodycontent>
+        <attribute>
+            <name>message</name>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+</taglib>

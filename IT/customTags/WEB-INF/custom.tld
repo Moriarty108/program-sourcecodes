@@ -1,0 +1,10 @@
+<taglib>
+    <jsp-version>1.0.0</jsp-version>
+    <tlb-version>2.0.0</tlb-version>
+    <tlib-version>2.0.0</tlib-version>
+    <tag>
+        <name>Hello</name>
+        <tag-class>custom.HelloTag</tag-class>
+        <bodycontent>empty</bodycontent>
+    </tag>
+</taglib>
