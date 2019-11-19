@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="./validate.js"></script>
+    <title>Webstar Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="mt-5" onsubmit="validate(event)">
+        <div class="form-group">
+          <label for="username">Hansraj College Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="hUsername"
+            id="hUsername"
+          />
+        </div>
+        <div class="form-group">
+          <label for="username">Webstar College Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="wUsername"
+            id="wUsername"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Webstar Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="cPassword"
+            id="cPassword"
+          />
+        </div>
+        <button class="btn btn-primary btn-block mt-5" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
