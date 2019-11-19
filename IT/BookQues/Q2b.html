@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q2b</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt('Enter Your Name');
+      if (name.length !== 0) {
+        let greeting = document.createElement('h2');
+        greeting.innerHTML = `Welcome,${name}`;
+        document.body.appendChild(greeting);
+      }
+    </script>
+  </body>
+</html>

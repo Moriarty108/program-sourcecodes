@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Q3</title>
+  </head>
+  <body>
+    <form action="" name="sort" onsubmit="attemptSort(event)">
+      <input
+        type="text"
+        name="input"
+        id="input"
+        placeholder="Enter elements seperated by commas(,)"
+      />
+      <br /><br />
+      <button type="submit">Go!</button>
+    </form>
+
+    <script>
+      const bubbleSort = array => {
+        let clonedArray = [...array];
+        for (let i = 0; i < clonedArray.length; i++) {
+          for (let j = 0; j < clonedArray.length - i - 1; j++) {
+            if (clonedArray[j] - clonedArray[j + 1] > 0) {
+              let temp = clonedArray[j];
+              clonedArray[j] = clonedArray[j + 1];
+              clonedArray[j + 1] = temp;
+            }
+          }
+        }
+        return clonedArray;
+      };
+
+      const attemptSort = event => {
+        event.preventDefault();
+        let array = document.sort.input.value.split(",");
+        array = bubbleSort(array);
+        let para = document.getElementById("sorted-array");
+        if (para === null) {
+          para = document.createElement("p");
+          para.id = "sorted-array";
+        }
+        para.innerHTML = `After Sorting : ${array.toString()}`;
+        document.body.appendChild(para);
+      };
+    </script>
+  </body>
+</html>

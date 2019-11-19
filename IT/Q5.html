@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q5</title>
+  </head>
+  <body>
+    <div id="color-text">Hello World</div>
+    <div id="moving-text" style="position: absolute">Moving</div>
+    <script>
+      let colorText = document.getElementById("color-text");
+      let movingText = document.getElementById("moving-text");
+
+      setTimeout(() => {
+        colorText.style.color = "crimson";
+      }, 1000);
+
+      let textPosition = 0;
+      setInterval(() => {
+        if (textPosition > window.innerWidth) textPosition = 0;
+        movingText.style.left = `${textPosition}px`;
+        textPosition++;
+      }, 10);
+    </script>
+  </body>
+</html>

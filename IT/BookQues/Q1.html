@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q1</title>
+  </head>
+  <body>
+    <a href="http://localhost:5500">Click!</a>
+    <script>
+      let greeting = document.createElement("h1");
+      greeting.innerHTML = "Welcome!";
+      window.addEventListener("load", () =>
+        document.body.appendChild(greeting)
+      );
+      window.addEventListener("beforeunload", event => {
+        alert("Goodbye");
+        event.returnValue = "Goodbye!";
+      });
+    </script>
+  </body>
+</html>

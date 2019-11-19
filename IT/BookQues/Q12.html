@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q12</title>
+  </head>
+  <body style="display: flex;justify-content: center;text-align: center">
+    <div class="red">
+      <p>R :</p>
+      <input
+        type="range"
+        name="red"
+        min="0"
+        max="255"
+        onchange="handleChange(event)"
+      />
+    </div>
+    <div class="green">
+      <p>G :</p>
+      <input type="range" name="green" " min="0" max="255"
+      onchange="handleChange(event)"/>
+    </div>
+    <div class="blue">
+      <p>B :</p>
+      <input
+        type="range"
+        name="blue"
+        min="0"
+        max="255"
+        onchange="handleChange(event)"
+      />
+    </div>
+
+    <script>
+      let color = {
+        red: 0,
+        green: 0,
+        blue: 0
+      };
+
+      const handleChange = event => {
+        color[[event.target.name]] = event.target.value;
+        console.log(color);
+        document.body.style.backgroundColor = `rgb(${color.red},${color.green},${color.blue})`;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q13</title>
+  </head>
+  <body style="display: flex; flex-direction: column; align-items: flex-start;">
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, suscipit!
+      Ipsam, in. Necessitatibus quidem eius voluptatem at laboriosam inventore
+      maxime magni aliquam excepturi, eaque, pariatur porro iusto autem alias
+      nostrum doloribus deleniti sunt labore culpa ratione, esse voluptas? Modi
+      harum sit nihil hic explicabo facilis vero, nam nostrum magnam quasi!
+    </p>
+    <button type="button" onclick="changeValue()">Change Value</button>
+    <script>
+      const changeValue = () => {
+        document.getElementById('para').innerHTML = 'Value Changed!';
+      };
+    </script>
+  </body>
+</html>

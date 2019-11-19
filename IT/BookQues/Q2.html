@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q2</title>
+  </head>
+  <body>
+    Value : <input type="text" name="input" id="input" />
+    <p>Action:</p>
+    <p><input type="radio" name="action" id="double" value="double" />Double</p>
+    <p><input type="radio" name="action" id="square" value="square" />Square</p>
+    Result : <input type="text" disabled name="result" id="result" />
+    <script>
+      let value = "";
+      document.getElementById("input").onchange = event => {
+        value = event.target.value;
+      };
+
+      const setResult = event => {
+        let result = document.getElementById("result");
+        if (event.target.value == "double") result.value = value * 2;
+        else result.value = value * value;
+      };
+
+      document.getElementById("square").onclick = event => setResult(event);
+      document.getElementById("double").onclick = event => setResult(event);
+    </script>
+  </body>
+</html>

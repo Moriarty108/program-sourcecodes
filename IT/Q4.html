@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Q4</title>
+  </head>
+  <body>
+    <script src="./Stack.js"></script>
+    <script>
+      let stack = new Stack();
+      stack.pushAll(2, 3, 4);
+      stack.pop();
+      let para = document.createElement("p");
+      para.innerHTML = `Stack Contents : ${stack.toString()}`;
+      document.body.appendChild(para);
+    </script>
+  </body>
+</html>

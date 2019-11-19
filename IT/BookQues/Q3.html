@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q3</title>
+  </head>
+  <body>
+    <script>
+      let num1 = 4,
+        num2 = 6;
+      let answer = Number;
+      for (let i = 1; i <= 3; i++) {
+        answer = prompt(`What is ${num1} + ${num2}`);
+        if (answer == num1 + num2) {
+          alert('Correct Answer');
+          break;
+        } else {
+          if (i !== 3) {
+            alert('Wrong Answer Try Again.');
+          } else {
+            alert('Out of Retries.');
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

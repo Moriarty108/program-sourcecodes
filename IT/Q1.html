@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>First</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="" onsubmit="handleSubmit(event)">
+      <input type="text" name="rollno" placeholder="Roll No" /><br /><br />
+      <input type="text" name="name" placeholder="Name" /><br /><br />
+      <input
+        type="text"
+        name="dob"
+        placeholder="Date Of Birth(mm/dd/yyyy)"
+      /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <script type="text/javascript">
+      const handleSubmit = event => {
+        event.preventDefault();
+        let form = document.forms[0];
+        var infoString = "";
+        if (form.rollno.value.length !== 7)
+          infoString = infoString.concat("<p>Roll No should be 7 digits</p>");
+        if (typeof form.name.value !== "string")
+          infoString = infoString.concat(
+            "<p>Name should be a valid string</p>"
+          );
+        if (form.dob.value.length !== 0) {
+          const date = new Date(form.dob.value);
+          infoString = infoString
+            .concat("<p>")
+            .concat(date.toDateString())
+            .concat("</p>");
+        }
+        let info = document.getElementById("info");
+        if (typeof info === undefined || info === null) {
+          info = document.createElement("div");
+          info.id = "info";
+        }
+        info.innerHTML = infoString;
+        document.body.appendChild(info);
+      };
+    </script>
+  </body>
+</html>

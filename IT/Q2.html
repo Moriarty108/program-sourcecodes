@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Q2</title>
+  </head>
+  <body>
+    <form onsubmit="validate(event)">
+      <input type="text" name="username" id="username" placeholder="Password" />
+      <br />
+      <br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+      />
+      <br />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+
+    <script>
+      const validate = event => {
+        event.preventDefault();
+        const { username, password } = document.forms[0];
+
+        let error = document.getElementById("error");
+        if (error === null) {
+          error = document.createElement("p");
+          error.id = "error";
+          error.style.color = "crimson";
+        }
+
+        if (username.value.length > 0 && password.value.length > 0) {
+          if (username.value === "apassan23" && password.value === "abcxyz") {
+            alert(`Welcome,${username.value}`);
+          } else {
+            error.innerHTML = "Wrong username or password!";
+            document.body.appendChild(error);
+          }
+        } else {
+          error.innerHTML = "All fields must be filled!";
+          document.body.appendChild(error);
+        }
+      };
+    </script>
+  </body>
+</html>

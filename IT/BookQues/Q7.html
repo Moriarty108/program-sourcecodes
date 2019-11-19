@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Q10</title>
+  </head>
+  <body>
+    <p><b>Major Dishes</b></p>
+    <select multiple name="dishes" id="dishes"></select>
+    <p><b>Starters</b></p>
+    <select multiple name="starters" id="starters"></select>
+    <p><b>Miscellanous</b></p>
+    <select name="misc" id="misc">
+      <option value="">--SELECT--</option>
+    </select>
+    <p><b>Orders</b></p>
+    <textarea name="orders" disabled id="orders" cols="30" rows="10"></textarea>
+    <div class="buttons">
+      <button type="button" onclick="order()">Order</button>
+      <button type="button" onclick="clr()">Clear</button>
+    </div>
+    <script>
+      const clr = () => {
+        document.getElementById("orders").value = "";
+      };
+      let menu = {
+        dishes: [
+          {
+            name: "MC-Burger",
+            price: 80
+          },
+          {
+            name: "Fish Fillets",
+            price: 90
+          },
+          {
+            name: "Chicken Burger",
+            price: 100
+          },
+          {
+            name: "Veg Burger",
+            price: 50
+          }
+        ],
+        starters: [
+          {
+            name: "French Fries",
+            price: 40
+          },
+          {
+            name: "Nuggets",
+            price: 50
+          },
+          {
+            name: "Fried Rice",
+            price: 60
+          },
+          {
+            name: "Spring Rolls",
+            price: 70
+          }
+        ],
+        misc: [
+          {
+            name: "Milk Shake",
+            price: 40
+          },
+          {
+            name: "Chocolate Shake",
+            price: 65
+          }
+        ]
+      };
+      const populate = (element, items) => {
+        items.map(item => {
+          let option = document.createElement("option");
+          option.innerHTML = `${item.name} -> ${item.price}`;
+          option.value = item.name;
+          element.appendChild(option);
+        });
+      };
+      populate(document.getElementById("dishes"), menu.dishes);
+      populate(document.getElementById("starters"), menu.starters);
+      populate(document.getElementById("misc"), menu.misc);
+
+      const getSelectItems = select => {
+        let options = select.options;
+        let result = [];
+        for (let i = 0; i < options.length; i++) {
+          if (options[i].selected) result.push(options[i].value);
+        }
+        return result;
+      };
+
+      const order = () => {
+        let dishes = document.getElementById("dishes");
+        let starters = document.getElementById("starters");
+        let misc = document.getElementById("misc");
+        let orders = document.getElementById("orders");
+
+        if (dishes.value.length !== 0) {
+          orders.innerHTML += getSelectItems(dishes)
+            .map(value => value.concat("\n"))
+            .join("");
+        }
+        if (starters.value.length !== 0) {
+          orders.innerHTML += getSelectItems(starters)
+            .map(value => value.concat("\n"))
+            .join("");
+        }
+        if (misc.value.length !== 0) {
+          orders.innerHTML += misc.value.concat("\n");
+        }
+      };
+    </script>
+  </body>
+</html>
